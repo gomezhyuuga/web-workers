@@ -8,5 +8,7 @@ we need to find all coprime numbers from 1 to 1x10^6 such that added together su
 To compute the coprime numbers, I use an algorithm called [Euclid's algorithm][Euclids]. For each number $1 \leq 1x10^8$,
 the evaluation of `GCD(i, 666) == 1` is done and if it holds, such number `i` is added to the final result.
 
+Check it out at: [https://gomezhyuuga.github.io/web-workers/]()
+
 [Coprime]: https://en.wikipedia.org/wiki/Coprime_integers
 [Euclids]: https://en.wikipedia.org/wiki/Euclidean_algorithm
