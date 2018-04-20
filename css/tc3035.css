@@ -1,0 +1,9 @@
+body {
+  padding-top: 15%;
+}
+
+input.small {
+  width: 100px;
+}
+
+._right { text-align: right; }

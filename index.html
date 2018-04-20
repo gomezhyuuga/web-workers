@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>TEC CEM TC3035 - Práctica 5</title>
+  <meta name="description" content="">
+  <meta name="author" content="gomezhyuuga">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="skeleton/css/normalize.css">
+  <link rel="stylesheet" href="skeleton/css/skeleton.css">
+  <link rel="stylesheet" href="css/tc3035.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="skeleton/images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+      <div class="one-half column">
+        <h4>Práctica #5: Coprimos Bestiales con Web Workers</h4>
+        <p>
+          Este es un ejemplo del uso de <em>Web Workers</em> para calcular
+          la <strong>sumatoria de todos los números entre uno y cien millones
+          (1x10<sup>8</sup>) que sean coprimos al número de la bestia (666).</strong>
+        </p>
+
+        <div class="row">
+          <div class="one-half column _right">
+            <label for="thread_no"># Threads:</label>
+          </div>
+          <div class="one-half column">
+            <input type="number" id="thread_no" value="8"
+              class="u-full-width">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="one-half column _right">
+            <label for="limit">Límite:</label>
+          </div>
+          <div class="one-half column">
+            <input type="number" id="limit" value="100000000"
+              class="u-full-width">
+          </div>
+        </div>
+
+        <p>
+          <button class="u-full-width" id="computeSeq">
+            Versión secuencial
+          </button>
+          <button class="button-primary u-full-width" id="computePar">
+            Versión paralela
+          </button>
+        </p>
+      </div>
+
+      <div class="one-half column">
+        <h5>Resultado</h5>
+        <p id="result">
+          Esperando para calcular...
+        </p>
+        <p>
+          Tiempo:
+          <strong id="performance">0.00</strong>
+          segs
+        </p>
+      </div>
+    </div>
+
+    <p class="_right">
+      <small>Programación Multinúcleo (TC3035) Agosto Diciembre 2015</small>
+    </p>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+<!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
