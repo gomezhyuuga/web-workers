@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>TEC CEM TC3035 - Práctica 5</title>
+  <title>Beastly Coprimes - Web Workers Example</title>
   <meta name="description" content="">
   <meta name="author" content="gomezhyuuga">
 
@@ -35,11 +35,16 @@
   <div class="container">
     <div class="row">
       <div class="one-half column">
-        <h4>Práctica #5: Coprimos Bestiales con Web Workers</h4>
+        <h4>Beastly Coprimes <br>
+          using Web Workers
+        </h4>
         <p>
-          Este es un ejemplo del uso de <em>Web Workers</em> para calcular
-          la <strong>sumatoria de todos los números entre uno y cien millones
-          (1x10<sup>8</sup>) que sean coprimos al número de la bestia (666).</strong>
+          Example of how to use <a href="https://developer.mozilla.org/es/docs/Web/API/Web_Workers_API">Web Workers</a> to compute the
+          <strong>
+            sum of all integer numbers from 1 to (1x10<sup>8</sup>) such that
+            it is <a href="https://en.wikipedia.org/wiki/Coprime_integers">coprime</a> to the
+            <em>number of the beast (666).</em> 
+          </strong>
         </p>
 
         <div class="row">
@@ -54,7 +59,7 @@
 
         <div class="row">
           <div class="one-half column _right">
-            <label for="limit">Límite:</label>
+            <label for="limit">Limit:</label>
           </div>
           <div class="one-half column">
             <input type="number" id="limit" value="100000000"
@@ -63,30 +68,44 @@
         </div>
 
         <p>
-          <button class="u-full-width" id="computeSeq">
-            Versión secuencial
+          <button class="u-full-width" id="computeSeq" data-parallel=0>
+            Sequential version
           </button>
-          <button class="button-primary u-full-width" id="computePar">
-            Versión paralela
+          <button class="button-primary u-full-width" id="computePar" data-parallel=1>
+            Parallel version
           </button>
         </p>
       </div>
 
       <div class="one-half column">
-        <h5>Resultado</h5>
+        <h5>Result</h5>
         <p id="result">
-          Esperando para calcular...
+          Waiting to compute...
         </p>
         <p>
-          Tiempo:
-          <strong id="performance">0.00</strong>
-          segs
+          <table class="u-full-width">
+            <caption>Execution time</caption>
+            <thead>
+              <tr>
+                <th>Sequential</th>
+                <th>Parallel</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="time-sequential">0.00 secs</td>
+                <td id="time-parallel">0.00 secs</td>
+              </tr>
+            </tbody>
+          </table>
         </p>
+
+        <h5>Speedup: <code id="speedup">NA</code></h5>
       </div>
     </div>
 
     <p class="_right">
-      <small>Programación Multinúcleo (TC3035) Agosto Diciembre 2015</small>
+      <small>Fernando Gómez &copy; 2015</small>
     </p>
   </div>
 
@@ -96,6 +115,7 @@
 <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="js/jquery.min.js"></script>
+  <script src="js/accounting.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
